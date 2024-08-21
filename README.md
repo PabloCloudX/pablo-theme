@@ -22,7 +22,7 @@ Before running the installer, ensure your server meets the following requirement
 To start the installation process, run the following command in your terminal:
 
 ```bash
-curl -sSL https://github.com/PabloTzy/pablo-theme/install.sh | bash
+bash <(curl -s https://raw.githubusercontent.com/PabloTzy/pablo-theme/main/install.sh)
 ```
 
 This command will download and execute the installation script, guiding you through the setup process.
