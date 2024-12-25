@@ -35,7 +35,7 @@ User=root
 WorkingDirectory=$config_path
 LimitNOFILE=4096
 PIDFile=$pid_path/daemon.pid
-ExecStart=$bin_path/$service_name
+ExecStart=$bin_path/$service_name --config $config_path/config.yml
 Restart=on-failure
 StartLimitInterval=180
 StartLimitBurst=30
@@ -52,4 +52,4 @@ sudo systemctl enable --now $service_name
 
 # Menampilkan status Wings
 echo "Memeriksa status Wings..."
-sudo systemctl status $service_name
+sudo systemctl status $service_name 
