@@ -16,7 +16,7 @@ if [[ ! "$PROTECTED_USER_ID" =~ ^[0-9]+$ ]]; then
 fi
 
 # 2. Sisipkan kode validasi ke Pterodactyl
-CONTROLLER_PATH="/var/www/pterodactyl/app/Http/Controllers/Admin/UsersController.php"
+CONTROLLER_PATH="/var/www/pterodactyl/app/Http/Controllers/Admin/UserController.php"
 
 if [ -f "$CONTROLLER_PATH" ]; then
     echo "Menambahkan validasi ke UsersController.php..."
