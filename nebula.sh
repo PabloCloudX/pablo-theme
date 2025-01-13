@@ -38,11 +38,11 @@ fi
 echo "Downloading the latest Blueprint release..."
 wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
 
-# Unarchive release
+# Unarchive release with overwrite confirmation
 echo "Unarchiving the release..."
 mv release.zip "$PANEL_PATH/release.zip"
 cd "$PANEL_PATH"
-unzip -o release.zip
+unzip -o release.zip <<< "A" # Automatically choose 'A' for overwrite all
 
 # Configure Blueprint
 echo "Configuring Blueprint..."
