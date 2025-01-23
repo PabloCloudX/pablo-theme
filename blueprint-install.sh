@@ -25,11 +25,10 @@ yarn
 echo "==============================================="
 echo "        DOWNLOAD LATEST BLUEPRINT              "
 echo "==============================================="
-cd /root
-wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
-mv release.zip /var/www/pterodactyl/release.zip
 cd /var/www/pterodactyl
-unzip release.zip
+wget "$(curl -s https://api.github.com/repos/BlueprintFramework/framework/releases/latest | grep 'browser_download_url' | cut -d '"' -f 4)" -O release.zip
+cd /var/www/pterodactyl
+unzip -o release.zip
 
 # Configuration
 echo "==============================================="
