@@ -4,8 +4,10 @@
 read -p "Masukkan nama service untuk Wings (misalnya 'pterodactyl' atau 'srv'): " service_name
 
 # Menanyakan lokasi path untuk konfigurasi Wings
-read -p "Masukkan lokasi path untuk konfigurasi Wings (misalnya '/etc/pterodactyl'): " config_path
+read -p "Masukkan nama folder konfigurasi Wings (contoh: pterodactyl): " config_name
+config_path="/etc/$config_name"
 
+echo "Path konfigurasi Wings: $config_path"
 # Menentukan lokasi direktori untuk Wings dan file executable
 bin_path="/usr/local/bin"
 pid_path="/var/run/$service_name"
